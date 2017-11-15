@@ -1,5 +1,7 @@
 # Webview Prototype
 
+앱 연동을 위한 Webview Prototype 입니다.
+
 ## Installation
 
 ```bash
