@@ -6,7 +6,7 @@ class Index extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            data: []
+            data: []    // TODO : https://jsonplaceholder.typicode.com/ 더미데이터 적용
         }
     }
     componentDidMount() {
