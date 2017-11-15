@@ -9,9 +9,8 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 # node 가 없으시다면,
 $ brew install node
 
-# node version 및 npm version 확인
-# node > v.8.x.x, npm > v.5.x.x 
-$ node -v && npm -v
+# node 및 npm version 확인
+$ node -v && npm -v         # node > v.8.x.x, npm > v.5.x.x 
 
 # 소스 빌드
 $ npm install -g yarn       # yarn 설치
