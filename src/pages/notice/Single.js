@@ -24,7 +24,7 @@ class Single extends Component {
         const state = this.state
 
         return (
-            <Page title={`Notice Single : ${state.id}`}>
+            <Page title={this.props.match.url}>
                 <Post
                     id={ state.id }
                     title={ state.title }

@@ -19,7 +19,7 @@ class Index extends Component {
     }
     render () {
         return (
-            <Page title="Notice Index">
+            <Page title={this.props.match.url}>
                 <Board data={this.state.data} url={this.props.match.url}/>
             </Page>
         )
