@@ -1,0 +1,18 @@
+.app {
+
+}
+.app-nav {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255,255,255,.8);
+}
+.app-nav-item {
+  display: block;
+  border: 1px solid #666;
+  padding: 10px;
+  font-size: .8rem;
+}
+.app-nav-item ~ .app-nav-item {
+  margin-top: -1px;
+}
