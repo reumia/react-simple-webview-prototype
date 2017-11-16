@@ -11,12 +11,14 @@ class Index extends Component {
         }
     }
     componentDidMount() {
-        this.setState({
-            data: [
-                { id: 1, title: '제목제목', body: '본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문', createAt: new Date() },
-                { id: 2, title: '제목제목', body: '본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문', createAt: new Date() }
-            ]
-        })
+        http
+            .get('/posts')
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    data: res.data
+                })
+            })
     }
     render () {
         return (

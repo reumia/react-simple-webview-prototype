@@ -4,9 +4,7 @@ import axios from 'axios'
  * Default Properties
  * @type {{baseURL: string}}
  */
-axios.defaults = {
-    baseURL: 'https://jsonplaceholder.typicode.com'
-}
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com'
 
 /**
  * Global Error Handling

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Page from '@/components/Page'
 import Post from '@/components/Post'
+import http from '@/utils/axios'
 
 class Single extends Component {
     constructor (props) {
@@ -13,12 +14,18 @@ class Single extends Component {
         }
     }
     componentDidMount () {
-        this.setState({
-            id: parseInt(this.props.match.params.id, 10),
-            title: '제목제목제목',
-            body: '본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문본문',
-            createAt: new Date(),
-        })
+        const id = parseInt(this.props.match.params.id, 10)
+
+        http
+            .get(`/posts/${id}`)
+            .then(res => {
+                this.setState({
+                    id: res.data.id,
+                    title: res.data.title,
+                    body: res.data.body,
+                    createAt: new Date(),
+                })
+            })
     }
     render () {
         const state = this.state
