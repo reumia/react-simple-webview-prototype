@@ -22,7 +22,7 @@ const Board = ({ data, url }) => {
             id={ item.id }
             title={ item.title }
             body={ item.body }
-            createAt={ item.createAt }
+            createAt={ item.createAt || new Date() }
         />
     ))
 

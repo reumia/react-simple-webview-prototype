@@ -23,7 +23,7 @@ class Single extends Component {
                     id: res.data.id,
                     title: res.data.title,
                     body: res.data.body,
-                    createAt: new Date(),
+                    createAt: res.data.createAt,
                 })
             })
     }
