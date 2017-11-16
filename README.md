@@ -7,6 +7,8 @@ This repository allows you to check out the following.
 - Http request configuration and structure with `axios` 
 - Throbber UI for loading resources with `react-transition-group` and `redux`
 
+> Especially this project don't use `Link` component of `react-router`, because all histories of browser and page transitions are depended on Application's behaviors.
+
 
 ## Installation
 
