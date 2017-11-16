@@ -14,7 +14,6 @@ class Index extends Component {
         http
             .get('/posts')
             .then(res => {
-                console.log(res)
                 this.setState({
                     data: res.data
                 })
