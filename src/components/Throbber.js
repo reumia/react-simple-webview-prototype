@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Transition from 'react-transition-group/Transition'
+import PropTypes from 'prop-types'
 
 import './Throbber.scss'
 
@@ -45,3 +46,7 @@ let mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Throbber)
+
+Throbber.propTypes = {
+    isVisible: PropTypes.bool.isRequired
+}
