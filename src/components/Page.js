@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '@/components/Page.scss'
 
 const Page = ({ title, children }) => (

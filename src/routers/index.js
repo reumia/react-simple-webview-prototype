@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import NoticeIndex from '@/pages/notice/Index'
 import NoticeSingle from '@/pages/notice/Single'
+import Throbber from '@/components/Throbber'
 
 import './index.scss'
 
@@ -20,6 +21,7 @@ const BasicRouter = ({ dispatch }) => (
                 <Route exact path="/notice" component={NoticeIndex}/>
                 <Route path="/notice/:id" component={NoticeSingle}/>
             </main>
+            <Throbber/>
         </div>
     </Router>
 )
