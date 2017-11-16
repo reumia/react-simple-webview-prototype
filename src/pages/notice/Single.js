@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Page from '@/components/Page'
 import Post from '@/components/Post'
+import Call from '@/components/Call'
 import http from '@/utils/axios'
 
 class Single extends Component {
@@ -38,6 +39,8 @@ class Single extends Component {
                     body={ state.body }
                     createAt={ state.createAt }
                 />
+                <Call type="HOME">To the List</Call>
+                <Call type="HOME">To the Home</Call>
             </Page>
         )
     }
