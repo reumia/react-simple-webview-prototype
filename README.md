@@ -1,6 +1,12 @@
 # Webview Prototype
 
-앱 연동을 위한 Webview Prototype 입니다.
+React project for webview of application prototyping.
+This repository allows you to check out the following.
+
+- File structure with `react-router`
+- Http request configuration and structure with `axios` 
+- Throbber UI for loading resources with `react-transition-group` and `redux`
+
 
 ## Installation
 
