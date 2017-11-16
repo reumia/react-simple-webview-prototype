@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: black;
+  background-color: transparentize(#fff, .03);
   .spinner {
     margin: 0 auto;
     width: 100px;
@@ -17,7 +17,7 @@
   .bounce {
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: #000;
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
