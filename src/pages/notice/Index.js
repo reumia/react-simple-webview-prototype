@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { showThrobber, hideThrobber } from '@/stores/actions'
 import Page from '@/components/Page'
 import Board from '@/components/Board'
 import http from '@/utils/axios'
@@ -7,7 +9,7 @@ class Index extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            data: []    // TODO : https://jsonplaceholder.typicode.com/ 더미데이터 적용
+            data: []
         }
     }
     componentDidMount() {
@@ -17,6 +19,7 @@ class Index extends Component {
                 this.setState({
                     data: res.data
                 })
+                this.props.hideThrobber()
             })
     }
     render () {
@@ -28,4 +31,11 @@ class Index extends Component {
     }
 }
 
-export default Index
+let mapDispatchToProps = (dispatch) => {
+    return {
+        showThrobber: () => dispatch(showThrobber()),
+        hideThrobber: () => dispatch(hideThrobber())
+    }
+}
+
+export default connect(undefined, mapDispatchToProps)(Index)

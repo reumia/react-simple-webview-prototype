@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { showThrobber, hideThrobber } from '@/stores/actions'
 import Page from '@/components/Page'
 import Post from '@/components/Post'
 import http from '@/utils/axios'
@@ -25,6 +27,7 @@ class Single extends Component {
                     body: res.data.body,
                     createAt: res.data.createAt,
                 })
+                this.props.hideThrobber()
             })
     }
     render () {
@@ -43,4 +46,11 @@ class Single extends Component {
     }
 }
 
-export default Single
+let mapDispatchToProps = (dispatch) => {
+    return {
+        showThrobber: () => dispatch(showThrobber()),
+        hideThrobber: () => dispatch(hideThrobber())
+    }
+}
+
+export default connect(undefined, mapDispatchToProps)(Single)
