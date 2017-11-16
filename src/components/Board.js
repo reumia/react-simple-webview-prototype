@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
 
-import './Board.scss'
+import '@/components/Board.scss'
 
 const BoardItem = ({ url, id, title, body, createAt }) => (
     <a href={ `${url}/${id}` } className="board-item">

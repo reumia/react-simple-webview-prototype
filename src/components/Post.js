@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment'
 
-import './Post.scss'
+import '@/components/Post.scss'
 
 const Post = ({ id, title, body, createAt }) => {
     return (

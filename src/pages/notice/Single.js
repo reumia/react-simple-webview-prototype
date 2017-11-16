@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Page from '../../components/Page'
-import Post from '../../components/Post'
+import Page from '@/components/Page'
+import Post from '@/components/Post'
 
 class Single extends Component {
     constructor (props) {

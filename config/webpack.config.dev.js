@@ -38,6 +38,7 @@ module.exports = {
         extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
         alias: {
             'react-native': 'react-native-web',
+            '@': paths.appSrc
         },
         plugins: [
             new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),

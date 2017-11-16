@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Page.scss'
+import '@/components/Page.scss'
 
 const Page = ({ title, children }) => (
     <div className="page">

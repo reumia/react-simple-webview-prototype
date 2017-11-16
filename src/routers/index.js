@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import NoticeIndex from '../pages/notice/Index'
-import NoticeSingle from '../pages/notice/Single'
+import NoticeIndex from '@/pages/notice/Index'
+import NoticeSingle from '@/pages/notice/Single'
 
 import './index.scss'
 

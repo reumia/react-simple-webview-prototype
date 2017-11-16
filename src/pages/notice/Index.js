@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Page from '../../components/Page'
-import Board from '../../components/Board'
+import Page from '@/components/Page'
+import Board from '@/components/Board'
+import http from '@/utils/axios'
 
 class Index extends Component {
     constructor (props) {
