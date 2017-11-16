@@ -1,20 +1,36 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import classNames from 'classnames'
+import Transition from 'react-transition-group/Transition'
 
 import './Throbber.scss'
 
+const duration = 100
+
+const defaultStyle = {
+    transition: `opacity ${duration}ms ease-in-out`,
+    opacity: 1
+}
+
+const transitionStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 0, display: 'none' }
+}
+
 const Throbber = ({ isVisible }) => {
-
-    const classes = classNames({
-        'throbber': true,
-        'active': isVisible
-    })
-
     return (
-        <div className={ classes }>
-            트로버
-        </div>
+        <Transition in={ !isVisible } timeout={ duration }>
+            {(state) => (
+                <div
+                    className='throbber'
+                    style={{
+                        ...defaultStyle,
+                        ...transitionStyles[state]
+                    }}
+                >
+                    트로버
+                </div>
+            )}
+        </Transition>
     )
 }
 
