@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { showThrobber, hideThrobber } from '@/stores/actions'
 import Page from '@/components/Page'
 import Board from '@/components/Board'
 import http from '@/utils/axios'
@@ -19,7 +17,6 @@ class Index extends Component {
                 this.setState({
                     data: res.data
                 })
-                this.props.hideThrobber()
             })
     }
     render () {
@@ -31,11 +28,4 @@ class Index extends Component {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        showThrobber: () => dispatch(showThrobber()),
-        hideThrobber: () => dispatch(hideThrobber())
-    }
-}
-
-export default connect(undefined, mapDispatchToProps)(Index)
+export default Index
