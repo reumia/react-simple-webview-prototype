@@ -4,7 +4,7 @@ import Transition from 'react-transition-group/Transition'
 
 import './Throbber.scss'
 
-const duration = 100
+const duration = 200
 
 const defaultStyle = {
     transition: `opacity ${duration}ms ease-in-out`,
@@ -27,7 +27,11 @@ const Throbber = ({ isVisible }) => {
                         ...transitionStyles[state]
                     }}
                 >
-                    트로버
+                    <div className="spinner">
+                        <div className="bounce bounce1"/>
+                        <div className="bounce bounce2"/>
+                        <div className="bounce bounce3"/>
+                    </div>
                 </div>
             )}
         </Transition>
