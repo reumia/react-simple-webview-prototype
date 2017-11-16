@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import NoticeIndex from '@/pages/notice/Index'
 import NoticeSingle from '@/pages/notice/Single'
-import Throbber from '@/components/Throbber'
 
 import './index.scss'
 
@@ -13,7 +12,6 @@ import './index.scss'
 const BasicRouter = ({ dispatch }) => (
     <Router>
         <div className="app">
-            <Throbber />
             <nav className="app-nav">
                 <a className="app-nav-item" href="/notice">/notice</a>
                 <a className="app-nav-item" href="/notice/3">/notice/3</a>
