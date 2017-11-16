@@ -11,12 +11,12 @@
   background-color: transparentize(#fff, .03);
   .spinner {
     margin: 0 auto;
-    width: 100px;
+    width: 5rem;
     text-align: center;
   }
   .bounce {
-    width: 10px;
-    height: 10px;
+    width: .5rem;
+    height: .5rem;
     background-color: #000;
     border-radius: 100%;
     display: inline-block;
@@ -24,7 +24,7 @@
     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   }
   .bounce ~ .bounce {
-    margin-left: 5px;
+    margin-left: .5rem;
   }
   .bounce1 {
     -webkit-animation-delay: -0.32s;
